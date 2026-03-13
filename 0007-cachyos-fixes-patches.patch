@@ -1,7 +1,7 @@
-From aca28bc0c5ef6e1c10e74f66771977907fd8eb88 Mon Sep 17 00:00:00 2001
+From 471e580ade7ebf2da837bf4dae5ddb28aef6f3e0 Mon Sep 17 00:00:00 2001
 From: Eric Naim <dnaim@cachyos.org>
 Date: Mon, 3 Nov 2025 23:49:26 +0800
-Subject: [PATCH 01/17] x86/CPU/AMD: Gatekeep Zen5 RDSEED "fix" behind
+Subject: [PATCH 01/15] x86/CPU/AMD: Gatekeep Zen5 RDSEED "fix" behind
  !CONFIG_CACHY
 
 This attack vector is really only relevant for servers, not desktop.
@@ -41,10 +41,10 @@ index bc94ff1e2..fcc1a954c 100644
 2.53.0
 
 
-From ae6b74aec53bae1db57d473c5a6d3e17c6713354 Mon Sep 17 00:00:00 2001
+From 029a2d3924bc139fe8789e030980062f696df890 Mon Sep 17 00:00:00 2001
 From: Christoffer Sandberg <cs@tuxedo.de>
 Date: Mon, 12 May 2025 11:51:54 +0200
-Subject: [PATCH 02/17] drm/i915/rc6: Disable RC6 for InfinityBook Pro Gen8
+Subject: [PATCH 02/15] drm/i915/rc6: Disable RC6 for InfinityBook Pro Gen8
 
 Signed-off-by: Christoffer Sandberg <cs@tuxedo.de>
 ---
@@ -87,10 +87,10 @@ index 286d49ecc..01da11b51 100644
 2.53.0
 
 
-From 17e60ceb7b3014bc8d4716e620fbb89672b25f3f Mon Sep 17 00:00:00 2001
+From 9957196bd83bce053f0ed0084cce45ce68e45f69 Mon Sep 17 00:00:00 2001
 From: Christoffer Sandberg <cs@tuxedo.de>
 Date: Tue, 1 Jul 2025 09:29:21 +0200
-Subject: [PATCH 03/17] drm/i915/rc6: Add another Boardname to "Disable RC6 for
+Subject: [PATCH 03/15] drm/i915/rc6: Add another Boardname to "Disable RC6 for
  InfinityBook Pro Gen8"
 
 Signed-off-by: Christoffer Sandberg <cs@tuxedo.de>
@@ -114,10 +114,10 @@ index 01da11b51..472c68b32 100644
 2.53.0
 
 
-From d033193334f92bddec3f8b3355ca5e96133bc23d Mon Sep 17 00:00:00 2001
+From b58eaf5229ab549d1767b27e8a53af0eaae52600 Mon Sep 17 00:00:00 2001
 From: Xie Yuanbin <qq570070308@gmail.com>
 Date: Sun, 23 Nov 2025 20:18:25 +0800
-Subject: [PATCH 04/17] x86/mm/tlb: Make enter_lazy_tlb() always inline on x86
+Subject: [PATCH 04/15] x86/mm/tlb: Make enter_lazy_tlb() always inline on x86
 
 enter_lazy_tlb() on x86 is short enough, and is called in context
 switching, which is the hot code path.
@@ -208,10 +208,10 @@ index f5b93e01e..71abaf0bd 100644
 2.53.0
 
 
-From 88894c7f132918b0b6d2c30eaba967e13777529d Mon Sep 17 00:00:00 2001
+From e89c22ce638c19346da6f4bec2fbb830104f23e6 Mon Sep 17 00:00:00 2001
 From: Xie Yuanbin <qq570070308@gmail.com>
 Date: Sun, 23 Nov 2025 20:18:26 +0800
-Subject: [PATCH 05/17] sched: Make raw_spin_rq_unlock() inline
+Subject: [PATCH 05/15] sched: Make raw_spin_rq_unlock() inline
 
 raw_spin_rq_unlock() is short, and is called in some hot code paths
 such as finish_lock_switch.
@@ -273,10 +273,10 @@ index bd350e408..0983763d4 100644
 2.53.0
 
 
-From c09238bf53b1e8a46c5f50ee632461341b3869a4 Mon Sep 17 00:00:00 2001
+From faf2984f2c82a02a2d6a0f6ac0c0d3475735429b Mon Sep 17 00:00:00 2001
 From: Xie Yuanbin <qq570070308@gmail.com>
 Date: Sun, 23 Nov 2025 20:18:27 +0800
-Subject: [PATCH 06/17] sched/core: Make finish_task_switch() and its
+Subject: [PATCH 06/15] sched/core: Make finish_task_switch() and its
  subfunctions always inline
 
 finish_task_switch() is a hot code path in context switching.
@@ -668,10 +668,10 @@ index 0983763d4..2405a6b38 100644
 2.53.0
 
 
-From e54d2b97c911258957e42bb6c7376a372bdda21b Mon Sep 17 00:00:00 2001
+From f56faabd50c242017072d126362c227ada7b685e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Tomasz=20Paku=C5=82a?= <forest10pl@gmail.com>
 Date: Tue, 9 Dec 2025 14:38:45 +0100
-Subject: [PATCH 07/17] amdgpu: Add CH7218 PCON to the VRR whitelist
+Subject: [PATCH 07/15] amdgpu: Add CH7218 PCON to the VRR whitelist
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -714,10 +714,10 @@ index 1c603b129..e838f7c12 100644
 2.53.0
 
 
-From 2900b6ee2c56537c0d063d5710fc6fdf5cfddaa3 Mon Sep 17 00:00:00 2001
+From 6542c84daf9808c2cc5aba39346db3d00708b341 Mon Sep 17 00:00:00 2001
 From: mnacakanov <petrushksa@gmail.com>
 Date: Sun, 21 Dec 2025 10:30:48 -0500
-Subject: [PATCH 08/17] Add BT support for PRIME B650M-A AX6 II motherboard
+Subject: [PATCH 08/15] Add BT support for PRIME B650M-A AX6 II motherboard
 
 By default BT starts up but doesn't show any devices when you try to pair. Adding the device id in block list, fixes that.
 ---
@@ -741,10 +741,10 @@ index ded09e94d..e9c672e78 100644
 2.53.0
 
 
-From cf8175214f3389cf823c9ea678cf0ad1cc610dc2 Mon Sep 17 00:00:00 2001
+From 51d26739a81d9a54308235539d4df38b008af390 Mon Sep 17 00:00:00 2001
 From: Joel Fernandes <joelagnelf@nvidia.com>
 Date: Mon, 29 Dec 2025 19:41:23 -0500
-Subject: [PATCH 09/17] rcu: Reduce synchronize_rcu() latency by reporting GP
+Subject: [PATCH 09/15] rcu: Reduce synchronize_rcu() latency by reporting GP
  kthread's CPU QS early
 
 The RCU grace period mechanism uses a two-phase FQS (Force Quiescent
@@ -859,10 +859,10 @@ index 293bbd9ac..2c1c9759e 100644
 2.53.0
 
 
-From bb859452a4f52f143a434d017c68a99f67d16bbf Mon Sep 17 00:00:00 2001
+From 55256faa071402917edfe64f864346057b57e2e6 Mon Sep 17 00:00:00 2001
 From: "Yury Norov (NVIDIA)" <yury.norov@gmail.com>
 Date: Sat, 6 Dec 2025 23:05:42 -0500
-Subject: [PATCH 10/17] sched/fair: Drop useless cpumask_empty() in
+Subject: [PATCH 10/15] sched/fair: Drop useless cpumask_empty() in
  find_energy_efficient_cpu()
 
 cpumask_empty() call is O(N) and useless because the previous
@@ -897,10 +897,10 @@ index 3eaeceda7..2ff87246b 100644
 2.53.0
 
 
-From 1b3bfc5a9782fc71533c590ec97dc58594419f59 Mon Sep 17 00:00:00 2001
+From e644f6339df818f0e37fda7b3e5fbddb2d444afc Mon Sep 17 00:00:00 2001
 From: "Yury Norov (NVIDIA)" <yury.norov@gmail.com>
 Date: Sat, 6 Dec 2025 22:30:36 -0500
-Subject: [PATCH 11/17] sched/fair: Simplify task_numa_find_cpu()
+Subject: [PATCH 11/15] sched/fair: Simplify task_numa_find_cpu()
 
 Use for_each_cpu_and() and drop some housekeeping code.
 
@@ -935,10 +935,10 @@ index 2ff87246b..5451f7bad 100644
 2.53.0
 
 
-From 5d36a94d29bf4d635461fa09ed84adfffcde660f Mon Sep 17 00:00:00 2001
+From 41bdb136c80571bf24e094b4bd0b07574966200e Mon Sep 17 00:00:00 2001
 From: Eric Naim <dnaim@cachyos.org>
 Date: Mon, 26 Jan 2026 14:38:04 +0800
-Subject: [PATCH 12/17] Revert "amdgpu: Add CH7218 PCON to the VRR whitelist"
+Subject: [PATCH 12/15] Revert "amdgpu: Add CH7218 PCON to the VRR whitelist"
 
 This reverts commit ff3e12260e66305c458fb000f1dae885fab9d073.
 
@@ -976,10 +976,10 @@ index e838f7c12..1c603b129 100644
 2.53.0
 
 
-From 19af404a0cfe9a3eb24c0d249bc329f67a2b23ef Mon Sep 17 00:00:00 2001
+From b3416dc11e0b784995f8b631675eb1914d394ffe Mon Sep 17 00:00:00 2001
 From: Zqiang <qiang.zhang@linux.dev>
 Date: Mon, 22 Dec 2025 19:53:18 +0800
-Subject: [PATCH 13/17] sched_ext: Avoid multiple irq_work_queue() calls in
+Subject: [PATCH 13/15] sched_ext: Avoid multiple irq_work_queue() calls in
  destroy_dsq()
 
 llist_add() returns true only when adding to an empty list, which indicates
@@ -1013,10 +1013,10 @@ index 0bb8fa927..94d75bf0c 100644
 2.53.0
 
 
-From 0119f281187478949793647b46c86959d1c00f6f Mon Sep 17 00:00:00 2001
+From c1d6293f08c6c539e5bd60e2ae20f46b48431805 Mon Sep 17 00:00:00 2001
 From: Mario Limonciello <mario.limonciello@amd.com>
 Date: Thu, 5 Feb 2026 10:42:54 -0600
-Subject: [PATCH 14/17] drm/amd: Fix hang on amdgpu unload by using
+Subject: [PATCH 14/15] drm/amd: Fix hang on amdgpu unload by using
  pci_dev_is_disconnected()
 
 The commit 28695ca09d32 ("drm/amd: Clean up kfd node on surprise
@@ -1075,10 +1075,10 @@ index d2c3885de..8900e0dc8 100644
 2.53.0
 
 
-From 4ef9cde11064ec43d4e7189625d181b23e9cc410 Mon Sep 17 00:00:00 2001
+From 008857f205efe9a3b621f873d8ae8b4c0bdccda1 Mon Sep 17 00:00:00 2001
 From: Eric Naim <dnaim@cachyos.org>
 Date: Sun, 8 Feb 2026 23:03:53 +0800
-Subject: [PATCH 15/17] bluetooth: btusb: Add VID/PID 13d3:3625
+Subject: [PATCH 15/15] bluetooth: btusb: Add VID/PID 13d3:3625
 
 Signed-off-by: Eric Naim <dnaim@cachyos.org>
 ---
@@ -1098,96 +1098,6 @@ index e9c672e78..945243cd7 100644
  	{ USB_DEVICE(0x13d3, 0x3585), .driver_info = BTUSB_MEDIATEK |
  						     BTUSB_WIDEBAND_SPEECH },
  	{ USB_DEVICE(0x13d3, 0x3610), .driver_info = BTUSB_MEDIATEK |
--- 
-2.53.0
-
-
-From e00481a589b846ea145fed8b66072b890ea5fc22 Mon Sep 17 00:00:00 2001
-From: Eric Naim <dnaim@cachyos.org>
-Date: Tue, 10 Feb 2026 00:31:06 +0800
-Subject: [PATCH 16/17] ALSA: hda/realtek: Add quirk for Gigabyte G5 KF5 (2023)
-
-Fixes microphone detection when a headset is connected to the audio jack
-using ALC256.
-
-Signed-off-by: Eric Naim <dnaim@cachyos.org>
----
- sound/hda/codecs/realtek/alc269.c | 1 +
- 1 file changed, 1 insertion(+)
-
-diff --git a/sound/hda/codecs/realtek/alc269.c b/sound/hda/codecs/realtek/alc269.c
-index b66965a52..9afa52ff5 100644
---- a/sound/hda/codecs/realtek/alc269.c
-+++ b/sound/hda/codecs/realtek/alc269.c
-@@ -7057,6 +7057,7 @@ static const struct hda_quirk alc269_fixup_tbl[] = {
- 	SND_PCI_QUIRK(0x144d, 0xc886, "Samsung Galaxy Book3 Pro (NP964XFG)", ALC298_FIXUP_SAMSUNG_AMP_V2_4_AMPS),
- 	SND_PCI_QUIRK(0x144d, 0xc1ca, "Samsung Galaxy Book3 Pro 360 (NP960QFG)", ALC298_FIXUP_SAMSUNG_AMP_V2_4_AMPS),
- 	SND_PCI_QUIRK(0x144d, 0xc1cc, "Samsung Galaxy Book3 Ultra (NT960XFH)", ALC298_FIXUP_SAMSUNG_AMP_V2_4_AMPS),
-+	SND_PCI_QUIRK(0x1458, 0x900e, "Gigabyte G5 KF5 (2023)", ALC2XX_FIXUP_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1458, 0xfa53, "Gigabyte BXBT-2807", ALC283_FIXUP_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1462, 0xb120, "MSI Cubi MS-B120", ALC283_FIXUP_HEADSET_MIC),
- 	SND_PCI_QUIRK(0x1462, 0xb171, "Cubi N 8GL (MS-B171)", ALC283_FIXUP_HEADSET_MIC),
--- 
-2.53.0
-
-
-From 96264a4a31af4dbc364d840a1a4939ea106560d4 Mon Sep 17 00:00:00 2001
-From: A1RM4X <dev@a1rm4x.com>
-Date: Wed, 4 Feb 2026 14:26:48 -0500
-Subject: [PATCH 17/17] USB: add QUIRK_NO_BOS for several devices
-MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-
-* usb: add QUIRK_NO_BOS for several devices
-  - Disables BOS handling on devices that break when the BOS
-    descriptor is read (e.g. UGREEN 35871).  Prevents the kernel
-    from falling back to a 5 Gbps link speed, unlocking the
-    expected 10 Gbps/4K 60 fps mode.
-
-* usb: core: reorder BOS‑quirk entries alphabetically
-  - The three USB_QUIRK_NO_BOS entries are now placed in the
-alphabetical order required by the file header.
-
-Signed-off-by: A1RM4X <dev@a1rm4x.com>
----
- drivers/usb/core/quirks.c | 9 +++++++++
- 1 file changed, 9 insertions(+)
-
-diff --git a/drivers/usb/core/quirks.c b/drivers/usb/core/quirks.c
-index c4d85089d..f4c800638 100644
---- a/drivers/usb/core/quirks.c
-+++ b/drivers/usb/core/quirks.c
-@@ -377,6 +377,9 @@ static const struct usb_device_id usb_quirk_list[] = {
- 	/* SanDisk Extreme 55AE */
- 	{ USB_DEVICE(0x0781, 0x55ae), .driver_info = USB_QUIRK_NO_LPM },
- 
-+	/* Avermedia Live Gamer Ultra 2.1 (GC553G2) - BOS descriptor fetch hangs at SuperSpeed Plus */
-+	{ USB_DEVICE(0x07ca, 0x2553), .driver_info = USB_QUIRK_NO_BOS },
-+
- 	/* Realforce 87U Keyboard */
- 	{ USB_DEVICE(0x0853, 0x011b), .driver_info = USB_QUIRK_NO_LPM },
- 
-@@ -437,6 +440,9 @@ static const struct usb_device_id usb_quirk_list[] = {
- 	{ USB_DEVICE(0x0b05, 0x17e0), .driver_info =
- 			USB_QUIRK_IGNORE_REMOTE_WAKEUP },
- 
-+	/* ASUS TUF 4K PRO - BOS descriptor fetch hangs at SuperSpeed Plus */
-+	{ USB_DEVICE(0x0b05, 0x1ab9), .driver_info = USB_QUIRK_NO_BOS },
-+
- 	/* Realtek Semiconductor Corp. Mass Storage Device (Multicard Reader)*/
- 	{ USB_DEVICE(0x0bda, 0x0151), .driver_info = USB_QUIRK_CONFIG_INTF_STRINGS },
- 
-@@ -565,6 +571,9 @@ static const struct usb_device_id usb_quirk_list[] = {
- 
- 	{ USB_DEVICE(0x2386, 0x350e), .driver_info = USB_QUIRK_NO_LPM },
- 
-+	/* UGREEN 35871 - BOS descriptor fetch hangs at SuperSpeed Plus */
-+	{ USB_DEVICE(0x2b89, 0x5871), .driver_info = USB_QUIRK_NO_BOS },
-+
- 	/* APTIV AUTOMOTIVE HUB */
- 	{ USB_DEVICE(0x2c48, 0x0132), .driver_info =
- 			USB_QUIRK_SHORT_SET_ADDRESS_REQ_TIMEOUT },
 -- 
 2.53.0
 
